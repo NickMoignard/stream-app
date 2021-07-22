@@ -1,0 +1,27 @@
+{
+    "compilerOptions": {
+      "allowJs": true,
+      "typeRoots": [
+        "../@types", "../node_modules/@types"
+      ],
+      "alwaysStrict": true,
+      "esModuleInterop": true,
+      "forceConsistentCasingInFileNames": true,
+      "isolatedModules": true,
+      "lib": ["dom", "es2017"],
+      "module": "commonjs",
+      "moduleResolution": "node",
+      "noEmit": false,
+      "noFallthroughCasesInSwitch": true,
+      "noUnusedLocals": true,
+      "noUnusedParameters": true,
+      "resolveJsonModule": true,
+      "skipLibCheck": true,
+      "strict": true,
+      "target": "esnext",
+      "outDir": "../out/server"
+    },
+    "exclude": ["node_modules"],
+    "include": ["**/*.ts", "**/*.js"]
+  }
+  

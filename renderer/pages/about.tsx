@@ -1,7 +1,8 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import Link from 'next/link'
 import Layout from '../components/Layout'
 
-const AboutPage = () => (
+const AboutPage = (): JSX.Element => (
   <Layout title="About | Next.js + TypeScript + Electron Example">
     <h1>About</h1>
     <p>This is the about page</p>

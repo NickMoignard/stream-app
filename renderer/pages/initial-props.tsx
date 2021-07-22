@@ -1,3 +1,5 @@
+/* eslint-disable react/no-unused-prop-types */
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import Layout from '../components/Layout'
@@ -7,10 +9,9 @@ import { findAll } from '../utils/sample-api'
 
 type Props = {
   items: User[]
-  pathname: string
 }
 
-const WithInitialProps = ({ items }: Props) => {
+const WithInitialProps = ({ items }: Props): JSX.Element => {
   const router = useRouter()
   return (
     <Layout title="List Example (as Function Component) | Next.js + TypeScript + Electron Example">
@@ -26,7 +27,11 @@ const WithInitialProps = ({ items }: Props) => {
   )
 }
 
-export async function getStaticProps() {
+interface StaticProps {
+  props: Props
+}
+
+export async function getStaticProps(): Promise<StaticProps> {
   const items: User[] = await findAll()
 
   return { props: { items } }
