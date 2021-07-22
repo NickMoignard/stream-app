@@ -1,10 +1,10 @@
-import MediaServer from "./app"
 import Http from "http"
 import process from "process"
 
+import App from "./app"
 class HTTPServer {
   httpServer: any
-  ms: MediaServer
+  app: App
   port: number
 
   constructor() {
@@ -15,8 +15,8 @@ class HTTPServer {
       this.port = 7666
     }
 
-    this.ms = new MediaServer()
-    this.httpServer = Http.createServer(this.ms.app)
+    this.app = new App()
+    this.httpServer = Http.createServer(this.app.express)
     if (!this.httpServer) throw Error('Http Server could not be created')
   }
 

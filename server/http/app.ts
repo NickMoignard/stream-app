@@ -1,12 +1,12 @@
 import Express from "express"
 
-class MediaServer {
-  app: any
+class App {
+  express: any
 
   constructor() {
-    this.app = Express()
+    this.express = Express()
 
-    this.app.all("*", (req: Express.Request, res: Express.Response, next: Express.NextFunction) => {
+    this.express.all("*", (req: Express.Request, res: Express.Response, next: Express.NextFunction) => {
       res.header("Access-Control-Allow-Origin", "*")
       res.header(
         "Access-Control-Allow-Headers",
@@ -21,8 +21,8 @@ class MediaServer {
       }
     })
 
-    this.app.use(Express.static("../../media"))
+    this.express.use(Express.static("../../media"))
   }
 }
 
-export default MediaServer
+export default App

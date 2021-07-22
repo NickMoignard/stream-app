@@ -1,7 +1,7 @@
-import HTTPServer from "./http/server"
-import RTMPServer from "./rtmp/server"
+import HTTPServer from "./http"
+import RTMPServer from "./rtmp"
 
-class MediaServer {
+class MediaServersWrapper {
     http: HTTPServer
     rtmp: RTMPServer
 
@@ -20,4 +20,4 @@ class MediaServer {
     }
 }
 
-export default MediaServer
+export default MediaServersWrapper
