@@ -1,7 +1,11 @@
 {
   "private": true,
-  "main": "main/index.js",
+  "name": "clsp-stream",
+  "main": "main/electron-src/index.js",
   "productName": "ElectronTypescriptNext",
+  "version": "0.1.0",
+  "author": "Nicholas Moignard",
+  "description": "",
   "scripts": {
     "clean": "rimraf dist main renderer/out renderer/.next",
     "dev": "yarn build-electron && electron .",
@@ -15,7 +19,6 @@
   },
   "dependencies": {
     "dotenv": "^10.0.0",
-    "electron": "^13",
     "electron-is-dev": "^1.1.0",
     "electron-next": "^3.1.5",
     "express": "^4.17.1",
@@ -42,9 +45,11 @@
     "@typescript-eslint/eslint-plugin": "^4.28.4",
     "@typescript-eslint/parser": "^4.28.4",
     "add": "^2.0.6",
+    "electron": "^13",
     "electron-builder": "^22.9.1",
     "eslint": "^7.31.0",
     "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-next": "^11.0.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-jsx-a11y": "^6.4.1",
