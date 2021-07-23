@@ -1,3 +1,6 @@
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable react/require-default-props */
 import React, { ReactNode } from 'react'
 import Link from 'next/link'
 import Head from 'next/head'

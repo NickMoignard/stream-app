@@ -19,6 +19,7 @@
   // ====================================================================
   "extends": [
     "airbnb",
+    "next",
     "plugin:react/recommended",
     "plugin:prettier/recommended",
     "plugin:jsx-a11y/recommended",
@@ -52,6 +53,7 @@
 
   // Rules Config
   "rules": {
+    "react/prop-types": "off",
     "no-console": "warn",
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off",

@@ -19,9 +19,9 @@
       "skipLibCheck": true,
       "strict": true,
       "target": "esnext",
-      "outDir": "../out/server"
+      "outDir": "./out"
     },
-    "exclude": ["node_modules"],
-    "include": ["**/*.ts", "**/*.js"]
+    "exclude": ["**/node_modules/*", "**/out/*"],
+    "include": ["**/*.ts"]
   }
   

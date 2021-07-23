@@ -1,11 +1,24 @@
 // Native
 import { join } from 'path'
 import { format } from 'url'
+import { env } from 'process'
 
 // Packages
 import { BrowserWindow, app, ipcMain, IpcMainEvent } from 'electron'
 import isDev from 'electron-is-dev'
 import prepareNext from 'electron-next'
+import ffmpeg from 'ffmpeg-static'
+import ffprobe from 'ffprobe-static'
+import dotenv from 'dotenv'
+
+import MediaServersWrapper from '../server/out/mediaServersWrapper'
+
+dotenv.config()
+env.FFMPEG_PATH = ffmpeg
+env.FFPROBE_PATH = ffprobe.path
+
+const servers = new MediaServersWrapper()
+servers.start()
 
 // Prepare the renderer once the app is ready
 app.on('ready', async () => {
